@@ -1,7 +1,7 @@
 import { ColorPair } from "./colorPair.js";
 import { EvenCountColorCode } from "./EvenCountColorCode.js";
-import { TestUsingColorPair, TestUsingPairNumber } from "./TestFunctions.js";
-
+import { TestUsingColorPair, TestUsingPairNumber, TestManual } from "./TestFunctions.js";
+import { Manual } from "./Manual.js";
 function test(){
 	TestUsingPairNumber(4,new ColorPair("WHITE","BROWN"))
 	TestUsingColorPair(new ColorPair("WHITE","BROWN"),4)
@@ -9,7 +9,8 @@ function test(){
 	TestUsingPairNumber(23,new ColorPair("RED","GREEN"))
 	TestUsingColorPair(new ColorPair("YELLOW","GREEN"),18)
 	TestUsingColorPair(new ColorPair("RED","BLUE"),6)
+	TestManual()
 }
-const colorPairsObject = new EvenCountColorCode()
-console.log(colorPairsObject.getManual())
+const Manualobj = new Manual()
+console.log(String(Manualobj))
 test()

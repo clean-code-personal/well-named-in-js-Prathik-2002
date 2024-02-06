@@ -19,13 +19,6 @@ export class EvenCountColorCode {
             }
         }
     }
-    getManual = ()=>{
-        let manualTemplate = "COLOR PAIR - MANUAL\n";
-        Object.keys(this.PAIRNUMBER_COLORPAIR_MAP).forEach(key => {
-            manualTemplate += `Pair No: ${key} => [MajorColor: ${this.PAIRNUMBER_COLORPAIR_MAP[key][0]}, MinorColor: ${this.PAIRNUMBER_COLORPAIR_MAP[key][1]}]\n`
-        })
-        return manualTemplate
-    };
     getColorFromPairNumber = (pairNumber) => {
         if(pairNumber>(this.MajorColorNames.length*this.MinorColorNames.length) || pairNumber<1) {
             throw `Argument PairNumber:${pairNumber} is outside the allowed range`
@@ -41,4 +34,5 @@ export class EvenCountColorCode {
         else
         return this.COLORPAIR_PAIRNUMBER_MAP[[pair.majorColor,pair.minorColor]]
     }
+
 }
